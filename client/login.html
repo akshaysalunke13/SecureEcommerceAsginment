@@ -1,0 +1,32 @@
+<html>
+    <script src="js/sha256.js"></script>
+    <script src="js/rsa.js"></script>
+<body>
+    <h3>Secure Electronic Commerce Assignment - s3730440 - Login </h3>
+
+    <form action="../server/login.php" method="POST">
+
+        <h4>Username:</h4> <input id="username" type="text" name="username"> <!--removed maxlength-->
+        <br /><br />
+        <h4>Password: </h4> <input id="password" type="password" name="password" maxlength="256">
+        <div id="error"></div>
+        <br /><br />
+
+        <button id="button" type="submit" onclick="encrypt()">LOGIN</button>
+    </form>
+
+    <script type="text/javascript">
+
+        function encrypt() {
+
+            var password = document.getElementById('password').value;
+            var hashed_pwd = SHA256.hash(password);
+            document.getElementById('password').innerHTML = hashed_pwd;
+            document.getElementById('password').value = hashed_pwd;
+        }
+
+    </script>
+
+</body>
+
+</html>

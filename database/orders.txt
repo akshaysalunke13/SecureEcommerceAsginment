@@ -1,0 +1,8 @@
+### Client:  ###
+Item	Quantity	Price	Sub-total
+Total Price: 
+Creditcard Number: 
+### Client:  ###
+Item	Quantity	Price	Sub-total
+Total Price: 
+Creditcard Number: 
